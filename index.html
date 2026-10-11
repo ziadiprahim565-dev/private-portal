@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b18">
+  <title>بوابة خاصة — نموذج تجريبي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient a"></div><div class="ambient b"></div>
+  <main class="shell">
+    <div class="brand"><span>✦</span> بوابة خاصة</div>
+    <div class="demo-note">واجهة تجريبية — لا توجد مديونية أو عملية دفع حقيقية</div>
+    <div class="progress" aria-label="تقدم الخطوات"><i class="on"></i><i></i><i></i><i></i></div>
+
+    <section class="panel active" id="key">
+      <small>ACCESS PORTAL · 01</small><div class="icon">⌘</div>
+      <h1>أهلاً بك</h1><p>أدخل المفتاح التجريبي للانتقال إلى الرسالة.</p>
+      <form id="keyform">
+        <label for="keyinput">المفتاح التجريبي</label>
+        <input id="keyinput" type="password" placeholder="اكتب المفتاح هنا" autocomplete="off" required>
+        <div class="error" id="keyerror" role="alert"></div>
+        <button type="submit">تحقق <b>↗</b></button>
+      </form>
+      <div class="foot">● نموذج واجهة فقط — لا يُستخدم لتحصيل الأموال</div>
+    </section>
+
+    <section class="panel" id="message">
+      <small>PRIVATE MESSAGE · 02</small><div class="icon">✧</div>
+      <h1>رسالة خاصة</h1>
+      <div class="message"><p id="mainmessage"></p></div>
+      <button type="button" id="review">متابعة <b>↗</b></button>
+      <button type="button" class="back" id="backkey">العودة للخطوة السابقة</button>
+    </section>
+
+    <section class="panel" id="transaction">
+      <small>DEMO VERIFICATION · 03</small><div class="icon">◎</div>
+      <h1>مراجعة تجريبية</h1><p>أدخل رقم العملية التجريبي للمتابعة. لا توجد معاملة مالية حقيقية.</p>
+      <form id="transform">
+        <label for="transinput">رقم العملية التجريبي</label>
+        <input id="transinput" type="password" inputmode="numeric" placeholder="أدخل الرقم" autocomplete="off" required>
+        <div class="error" id="transerror" role="alert"></div>
+        <button type="submit">تأكيد الرقم <b>↗</b></button>
+      </form>
+      <button type="button" class="back" id="backmessage">العودة للرسالة</button>
+    </section>
+
+    <section class="panel final-panel" id="final">
+      <small>DEMO STATUS · 04</small>
+      <div class="warning-icon" aria-hidden="true"><span>!</span></div>
+      <h1 class="final-title">تم المسح بنجاح</h1>
+      <div class="message final-message"><p id="finalmessage"></p></div>
+      <p class="final-note">هذه نتيجة عرض تجريبي فقط؛ لم يتم حذف أي بيانات.</p>
+      <button type="button" id="restart">العودة إلى البداية <b>↺</b></button>
+    </section>
+
+    <footer>PRIVATE ACCESS <span>•</span> DEMO INTERFACE</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
